@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Compose Email</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Compose Email</h1>
+<form action="/send_email" method="post">
+<label for="recipient">Recipient:</label>
+<input type="email" name="recipient" id="recipient" required>
+<br>
+<label for="subject">Subject:</label>
+<input type="text" name="subject" id="subject" required>
+<br>
+<label for="message">Message:</label>
+<textarea name="message" id="message" rows="10" required></textarea>
+<br>
+<input type="submit" value="Send">
+</form>
+</body>
+</html>
+
+
