@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>List Emails</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>List Emails</h1>
+<table>
+<thead>
+<tr>
+<th>Sender</th>
+<th>Subject</th>
+<th>Timestamp</th>
+<th>Actions</th>
+</tr>
+</thead>
+<tbody>
+{% for email in emails %}
+<tr>
+<td>{{ email.sender }}</td>
+<td>{{ email.subject }}</td>
+<td>{{ email.timestamp }}</td>
+<td>
+<a href="/read_email/{{ email.id }}">Read</a>
+<a href="/reply_email/{{ email.id }}">Reply</a>
+<a href="/delete_email/{{ email.id }}">Delete</a>
+</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+</body>
+</html>
+
+
