@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Planner</title>
+</head>
+<body>
+<h1>Planner</h1>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Time Slot</th>
+</tr>
+</thead>
+<tbody>
+{% for task in tasks %}
+<tr>
+<td>{{ task.task }}</td>
+<td>{{ task.time_slot }}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+</body>
+</html>
+
